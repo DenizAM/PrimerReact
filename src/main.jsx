@@ -5,6 +5,7 @@ import './index.css'
 
 //IMPORTANDO con control + espacio = importacion automatica
 import { MyappExportada } from './assets/MiNuevoComponente.jsx';
+import App from './App.jsx';
 
 
 
@@ -222,16 +223,25 @@ elemento1
 
    
   /*Mostrando en pantalla 3___________________________________________________________*/
-  ReactDOM.createRoot(document.getElementById('root')).render(
+ // ReactDOM.createRoot(document.getElementById('root')).render(
     //No se invoca como funcion
     //Myapp()
     //Si no con <> p/e <Myapp />
     //Pasando propiedades o PROPS
     //Estructura < + funcion + clave del atributo + valor del atributo + >
-    <>
+   /* <>
     <MyappExportada titulo1="Hello world ODIE! TITULO 1" contenido1="CONTENIDO 1Lotem CHIMUU ipsum"/>
     </>
-   )
+   )*/
+
+
+   ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root'),
+    <MyappExportada titulo1="Hello world ODIE! TITULO 1" contenido1="CONTENIDO 1Lotem CHIMUU ipsum"/>
+   );
 
 
   /*Mostrando en pantalla 4___________________________________________________________*/
